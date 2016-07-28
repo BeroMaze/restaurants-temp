@@ -97,13 +97,16 @@ main{
   text-align: center;
   overflow-y: auto;
 }
+#homeAbout p{
+  font-size: .9em;
+}
 #gmap{
   width: 25%;
   height: 90%;
   /*border: solid;*/
   margin: auto;
 }
-#gmap img{
+#map{
   width: 100%;
   height: 100%;
 }
