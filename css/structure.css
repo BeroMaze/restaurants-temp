@@ -13,6 +13,7 @@ header{
   height: 10%;
   padding-bottom: 5px;
   background-color: rgba(235, 235, 235, 0.54);
+  cursor: pointer;
 }
 #title{
   margin-top: 70px;
@@ -51,6 +52,7 @@ header p{
   margin: 0;
   padding: 0;
   justify-content: space-between;
+  cursor: pointer;
 }
 nav{
   height: 30px;
@@ -70,6 +72,7 @@ main{
   /*margin-top: 5px;*/
   padding: 0;
   height: 100%;
+  cursor: pointer;
 }
 #navList li{
   align-self: center;
