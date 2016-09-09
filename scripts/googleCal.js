@@ -1,30 +1,4 @@
-var express = require('express');
-var fs = require('fs');
-var readline = require('readline');
-var google = require('googleapis');
-var googleAuth = require('google-auth-library');
-var app = express();
-// var bodyParser = require('body-parser');
-// var pg = require('pg');
-var PORT = process.env.PORT;
-// var conString = process.env.ELEPHANTSQL_URL;
-// var userString = process.env.ELEPHANTSQL_URL_USER;
-var eventObject = [];
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
-app.use(express.static('./'));
-app.use('/static', express.static(__dirname));
-// app.use(bodyParser());
-
-app.get('*', function(request, response) {
-  // console.log('New request:', request.url);
-  response.sendFile('index.html', { root: '.' });
-});
 
 // If modifying these scopes, delete your previously saved credentials
 // at ~/.credentials/calendar-nodejs-quickstart.json
@@ -139,25 +113,14 @@ function listEvents(auth) {
     }
     var events = response.items;
     if (events.length == 0) {
-      // console.log('No upcoming events found.');
+      console.log('No upcoming events found.');
     } else {
-      // console.log('Upcoming 10 events:');
+      console.log('Upcoming 10 events:');
       for (var i = 0; i < events.length; i++) {
         var event = events[i];
         var start = event.start.dateTime || event.start.date;
-        // console.log('%s - %s', start, event.summary);
-        eventObject.push(start, event.summary);
-        // console.log(eventObject);
+        console.log('%s - %s', start, event.summary);
       }
     }
   });
 }
-app.post('/eventSendBack', function(req, res) {
-  // console.log('post post post');
-  res.send([eventObject]);
-});
-
-app.listen(PORT, function(){
-  console.log('listen on port:'+ PORT);
-  console.log('server running');
-});

@@ -15,6 +15,24 @@ $('#navList li').on('click', function(event) {
     $('#eventsPage').show();
     $('#navList li').removeClass('mainMenuOn');
     $(this).addClass('mainMenuOn');
+
+    $.post('/eventSendBack', {}, function(data) {
+    }).done(function(data) {
+      var date;
+      var event;
+      data[0].forEach(function(each) {
+        if(Number(each.substring(0, 1))){
+          console.log('number: '+ each.substring(5, 10));
+          date = each.substring(5, 10);
+        }
+        else {
+          event = each;
+          console.log(event);
+          console.log(date + ' ' + event);
+          $('#sideEvents').append('<h4>'+date + ' ' + event+ '<h4/><br>');
+        }
+      });
+    });
   }
   else if ($(this).text() === 'About') {
     $('.mainPages').hide();

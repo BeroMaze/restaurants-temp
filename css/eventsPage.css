@@ -1,0 +1,15 @@
+#eventsPage{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  width: 95%;
+  height: 95%;
+}
+
+#sideEvents{
+  width: 30%;
+  height: 600px;
+  border: solid;
+  overflow: scroll;
+}
