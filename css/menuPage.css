@@ -36,9 +36,14 @@
 #menuOptions li{
   border-bottom: 3px solid;
   border-radius: 5px;
-  padding: 1%;
+  padding: .5%;
   cursor: pointer;
 }
+.menuLinkOn{
+  border-top: 3px solid;
+  border-radius: 5px;
+}
+
 #menuBorder{
   width: 98%;
   height: 90%;
