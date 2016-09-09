@@ -74,6 +74,12 @@ main{
   height: 100%;
   cursor: pointer;
 }
+.mainMenuOn{
+  border-left: 2px solid;
+  border-right: 2px solid;
+  border-radius: 5px;
+  padding: .3%;
+}
 #navList li{
   align-self: center;
 }
