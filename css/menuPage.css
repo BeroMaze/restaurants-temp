@@ -17,11 +17,16 @@
   border: solid;
   margin-top: 1%;
   margin-bottom: 1%;
+  background-color:rgba(29, 27, 27, 1);
+  color: rgb(186, 181, 181);
+
 }
 #menuSections{
   width: 100%;
   height: 8%;
   border-bottom: solid;
+  background-color:rgba(29, 27, 27, 1);
+  color: rgb(186, 181, 181);
 }
 #menuOptions{
   width: 90%;
@@ -47,8 +52,11 @@
 #menuBorder{
   width: 98%;
   height: 90%;
-  border: solid;
+  border-right: solid;
+  border-left: solid;
+  border-bottom: solid;
   margin: auto;
+  margin-top: 0;
   padding: 0;
 }
 .menuPic{
@@ -58,6 +66,6 @@
   margin: 0;
   display: none;
 }
-#breakfastPic{
+#foodPic{
   display: block;
 }
