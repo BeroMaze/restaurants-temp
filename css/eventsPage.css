@@ -1,5 +1,6 @@
 #eventsPage{
   display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
@@ -8,8 +9,17 @@
 }
 
 #sideEvents{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 30%;
   height: 600px;
-  border: solid;
+  /*border: solid;*/
   overflow: scroll;
+  text-align: center;
+}
+
+#sideEvents h4{
+  margin: auto;
+
 }

@@ -54,7 +54,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
   console.log(userInfo);
   directionsService.route({
     origin: userInfo.userlat + ', ' + userInfo.userlong,
-    destination: 47.8554+', '+ -121.9710,
+    destination: '6049 Seaview Ave NW Seattle, WA 98107',
     travelMode: 'DRIVING'
   }, function(response, status) {
     if (status === google.maps.DirectionsStatus.OK) {
