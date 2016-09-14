@@ -19,6 +19,7 @@ header{
 }
 #title{
   margin-top: 70px;
+  cursor: pointer;
 }
 #leftHeader{
   flex-direction: column;
